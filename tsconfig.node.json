@@ -1,13 +1,22 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "skipLibCheck": true,
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    // ✅ Don't emit .d.ts files
+    "declaration": false,
+    "noEmit": true,
+
+    // Loosen errors that block deploy
     "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noEmitOnError": false
+    "noUnusedParameters": false
   },
   "include": ["src", "vite.config.ts"],
   "exclude": ["node_modules", "dist"]
