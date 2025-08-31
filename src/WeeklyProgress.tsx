@@ -22,6 +22,11 @@ const WeeklyProgress: React.FC = () => {
       <ResponsiveContainer className="p-0" width="100%" height="80%">
         <BarChart data={chartData}>
           <XAxis dataKey="day" tick={{ fill: "white" }} axisLine={false} tickLine={false} />
+          <YAxis
+            domain={[0, (dataMax: number) => Math.max(dataMax, 5)]}
+            allowDecimals={false}
+            hide={true}  
+          />
           <Tooltip
             cursor={{ fill: "rgba(255,255,255,0.1)" }}
             content={({ active, payload }) => {
