@@ -98,7 +98,7 @@ const Problem = ({ problem }: IProblemProps) => {
         >
           {problem.problemLink.includes("leetcode") ? (
             <SiLeetcode />
-          ) : problem.problemLink.includes("gfg") ? (
+          ) : problem.problemLink.includes("geeksforgeeks") ? (
             <SiGeeksforgeeks />
           ) : (
             <IoMdLink />
